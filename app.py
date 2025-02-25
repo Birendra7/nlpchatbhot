@@ -11,7 +11,9 @@ app = Flask(__name__)
 
 # Ensure required NLTK resources are available
 import os
-nltk.data.path.append(os.path.join(os.getenv("APPDATA"), "nltk_data"))
+#nltk.data.path.append(os.path.join(os.getenv("APPDATA"), "nltk_data"))
+nltk.data.path.append(os.path.expanduser("~/nltk_data"))
+
 
 nltk.download('punkt_tab')
 try:
